@@ -1,0 +1,11 @@
+Source code namespaces descriptions:
+1. Protocol and Data Layer:
+	weibocon.org.protocols
+	weibocon.org.data
+	weibocon.org.database
+2. Business Layer:
+	weibocon.org.actions
+3. UI Layer:
+	weibocon.org.adapters
+	weibocon.org.UI
+	weibocon.org.WeiboconActivity.java
