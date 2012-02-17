@@ -78,9 +78,9 @@ public class WeiBoSqliteOpenHelper extends SQLiteOpenHelper {
 		// User
 		sql.append("Create Table if not exists" + tbl_UserInfo);
 		sql.append(" ( Id Integer Primary key,");
+		sql.append("Uid Integer,");
 		sql.append("Name Nvarchar(20),");
 		sql.append("Nick Nvarchar(10),");
-		sql.append("Uid Integer,");
 		sql.append("URL Nvarchar(50),");
 		sql.append("Domain Nvarchar(50),");
 		sql.append("Head Nvarchar(50),");
