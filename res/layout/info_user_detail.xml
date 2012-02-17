@@ -11,7 +11,7 @@
         android:layout_alignParentTop="true"
         android:layout_marginLeft="16dp"
         android:layout_marginTop="21dp"
-        android:src="@drawable/ic_launcher" />
+        android:src="@drawable/logo" />
 
     <Button
         android:id="@+id/button1"
