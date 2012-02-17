@@ -11,7 +11,7 @@ import android.database.sqlite.SQLiteOpenHelper;
 public class WeiBoSqliteOpenHelper extends SQLiteOpenHelper {
 
 	/*
-	 * database version 
+	 * database version
 	 */
 	static final int version = 1;
 	/*
@@ -25,58 +25,57 @@ public class WeiBoSqliteOpenHelper extends SQLiteOpenHelper {
 	/*
 	 * 逕ｨ謌ｷ陦ｨ蜷咲ｧｰ
 	 */
-	static final String tbl_UserInfo ="UserInfo";
+	static final String tbl_UserInfo = "UserInfo";
 	/*
 	 * 謨呵ご蜷咲ｧｰ
 	 */
-	static final String tbl_Education ="Education";
+	static final String tbl_Education = "Education";
 	/*
 	 * 譬�ｭｾ蜷咲ｧｰ
 	 */
-	static final String tbl_Tag ="Tag";
+	static final String tbl_Tag = "Tag";
 	/*
 	 * 菫｡莉ｶ蜷咲ｧｰ
 	 */
-	static final String tbl_Messages ="Messages";
+	static final String tbl_Messages = "Messages";
 	/*
 	 * 蜈ｳ豕ｨ蟇ｹ雎｡蜷咲ｧｰ
 	 */
-	static final String tbl_Friends ="Friends";
+	static final String tbl_Friends = "Friends";
 	/*
 	 * 邊我ｸ晏錐遘ｰ
 	 */
-	static final String tbl_Followers ="Followers";
+	static final String tbl_Followers = "Followers";
 	/*
 	 * 隸�ｮｺ蜷咲ｧｰ
 	 */
-	static final String tbl_Comments ="Comments";
+	static final String tbl_Comments = "Comments";
 	/*
 	 * 陦ｨ諠�錐遘ｰ
 	 */
-	static final String tbl_Emotions ="Emotions";
+	static final String tbl_Emotions = "Emotions";
 	/*
 	 * 蝨ｰ蝮��陦ｨ蜷咲ｧｰ
 	 */
-	static final String tbl_Code_Location ="Code_Location";
+	static final String tbl_Code_Location = "Code_Location";
 	/*
 	 * 逋ｻ蠖戊｡ｨ蜷咲ｧｰ
 	 */
-	static final String tbl_LoginUser ="LoginUser";
-	
+	static final String tbl_LoginUser = "LoginUser";
+
 	public WeiBoSqliteOpenHelper(Context context, String name,
 			CursorFactory factory, int version) {
 		super(context, name, factory, version);
-		
-	}
 
+	}
 
 	@Override
 	public void onCreate(SQLiteDatabase db) {
 		// TODO Auto-generated method stub
-		//蛻帛ｻｺ謨ｰ謐ｮ蠎楢｡ｨschema
+		// 蛻帛ｻｺ謨ｰ謐ｮ蠎楢｡ｨschema
 		StringBuilder sql = new StringBuilder();
-		
-		//User
+
+		// User
 		sql.append("Create Table if not exists" + tbl_UserInfo);
 		sql.append(" ( Id Integer Primary key,");
 		sql.append("Name Nvarchar(20),");
@@ -107,15 +106,15 @@ public class WeiBoSqliteOpenHelper extends SQLiteOpenHelper {
 		sql.append("following Bool,");
 		sql.append("Allow_all_act_msg Bool,");
 		sql.append("Geo_enabled Bool,");
-		sql.append("Allow_all_comment Bool,"); 
+		sql.append("Allow_all_comment Bool,");
 		sql.append("Avatar_large Nvarchar(50),");
 		sql.append("Verified_reason Nvarchar(100),");
 		sql.append("Follow_me Bool,");
 		sql.append("Bi_followers_count Integer,");
 		sql.append("WeiboType Integer");
 		sql.append(")");
-		
-		//Status
+
+		// Status
 		sql.append("Create Table if not exists" + tbl_Status);
 		sql.append(" ( Id Long Primary key,");
 		sql.append(" ( Text Nvarchar(150),");
@@ -135,29 +134,29 @@ public class WeiBoSqliteOpenHelper extends SQLiteOpenHelper {
 		sql.append(" ( uid Integer,");
 		sql.append(" ( self Boolean,");
 		sql.append(" ( Type Integer");
-		
+
 		sql.append(")");
-		
-		//Emotion
+
+		// Emotion
 		sql.append("Create Table if not exists" + tbl_Emotions);
 		sql.append(" ( Id Long Primary key,");
 		sql.append(" ( Type Integer,");
 		sql.append(" ( Icon Blob,");
 		sql.append(" ( Phrase Nvarchar(20),");
 		sql.append(" ( Url Nvarchar(50)");
-		
+
 		sql.append(")");
-		
-		//Code_Location
+
+		// Code_Location
 		sql.append("Create Table if not exists" + tbl_Code_Location);
 		sql.append(" ( Id Long Primary key,");
 		sql.append(" ( Code Long,");
 		sql.append(" ( Icon Blob,");
 		sql.append(" ( Location Nvarchar(50)");
-		
+
 		sql.append(")");
-		
-		//Comments
+
+		// Comments
 		sql.append("Create Table if not exists" + tbl_Comments);
 		sql.append(" ( Id Long Primary key,");
 		sql.append(" ( Create_at Datetime,");
@@ -167,10 +166,10 @@ public class WeiBoSqliteOpenHelper extends SQLiteOpenHelper {
 		sql.append(" ( Mid Integer,");
 		sql.append(" ( Status_id Long,");
 		sql.append(" ( Reply_Comments Nvarchar(150)");
-		
+
 		sql.append(")");
-		
-		//Education
+
+		// Education
 		sql.append("Create Table if not exists" + tbl_Education);
 		sql.append(" ( Id Inetger Primary key,");
 		sql.append(" ( uid Integer,");
@@ -178,17 +177,17 @@ public class WeiBoSqliteOpenHelper extends SQLiteOpenHelper {
 		sql.append(" ( Schoolid Integer,");
 		sql.append(" ( Departmentid Integer,");
 		sql.append(" ( Level Integer");
-		
+
 		sql.append(")");
-		
-		//Tag
+
+		// Tag
 		sql.append("Create Table if not exists" + tbl_Tag);
 		sql.append(" ( Id Inetger Primary key,");
 		sql.append(" ( Name Nvarchar(50)");
-		
+
 		sql.append(")");
-		
-		//Messages
+
+		// Messages
 		sql.append("Create Table if not exists" + tbl_Messages);
 		sql.append(" ( Id Inetger Primary key,");
 		sql.append(" ( Text Nvarchar(150),");
@@ -205,10 +204,10 @@ public class WeiBoSqliteOpenHelper extends SQLiteOpenHelper {
 		sql.append(" ( Location Nvarchar(100),");
 		sql.append(" ( Geo Nvarchar(50),");
 		sql.append(" ( Isvip Boolean");
-		
+
 		sql.append(")");
-		
-		//LoginUser
+
+		// LoginUser
 		sql.append("Create Table if not exists" + tbl_LoginUser);
 		sql.append(" ( Uid Inetger ,");
 		sql.append(" ( AccessToken Nvarchar(50),");
@@ -216,10 +215,10 @@ public class WeiBoSqliteOpenHelper extends SQLiteOpenHelper {
 		sql.append(" ( IsOnline Boolean,");
 		sql.append(" ( LastLogOut DateTime,");
 		sql.append(" ( CurrentLogin DateTime");
-		
+
 		sql.append(")");
-		
-		//Friends
+
+		// Friends
 		sql.append("Create Table if not exists" + tbl_Friends);
 		sql.append(" ( Id Integer Primary key,");
 		sql.append("Name Nvarchar(20),");
@@ -250,7 +249,7 @@ public class WeiBoSqliteOpenHelper extends SQLiteOpenHelper {
 		sql.append("Following Bool,");
 		sql.append("Allow_all_act_msg Bool,");
 		sql.append("Geo_enabled Bool,");
-		sql.append("Allow_all_comment Bool,"); 
+		sql.append("Allow_all_comment Bool,");
 		sql.append("Avatar_large Nvarchar(50),");
 		sql.append("Verified_reason Nvarchar(100),");
 		sql.append("Follow_me Bool,");
@@ -258,8 +257,8 @@ public class WeiBoSqliteOpenHelper extends SQLiteOpenHelper {
 		sql.append("Online_status Integer,");
 		sql.append("WeiboType Integer");
 		sql.append(")");
-		
-		//Followers
+
+		// Followers
 		sql.append("Create Table if not exists" + tbl_Followers);
 		sql.append(" ( Id Integer Primary key,");
 		sql.append("Name Nvarchar(20),");
@@ -290,7 +289,7 @@ public class WeiBoSqliteOpenHelper extends SQLiteOpenHelper {
 		sql.append("Following Bool,");
 		sql.append("Allow_all_act_msg Bool,");
 		sql.append("Geo_enabled Bool,");
-		sql.append("Allow_all_comment Bool,"); 
+		sql.append("Allow_all_comment Bool,");
 		sql.append("Avatar_large Nvarchar(50),");
 		sql.append("Verified_reason Nvarchar(100),");
 		sql.append("Follow_me Bool,");
@@ -298,17 +297,14 @@ public class WeiBoSqliteOpenHelper extends SQLiteOpenHelper {
 		sql.append("Online_status Integer,");
 		sql.append("WeiboType Integer");
 		sql.append(")");
-		
-		
+
 		db.execSQL(sql.toString());
 	}
 
 	@Override
 	public void onUpgrade(SQLiteDatabase db, int oldVersion, int newVersion) {
 		// TODO Auto-generated method stub
-		
+
 	}
-	
 
 }
-
