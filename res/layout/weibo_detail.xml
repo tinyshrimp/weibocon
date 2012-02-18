@@ -2,8 +2,61 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical" 
+    android:weightSum="1"
+    android:background="#ffffff">
 
-    
+     <LinearLayout android:layout_width="match_parent" android:id="@+id/pnl_Header" android:gravity="center_vertical" android:layout_height="40dip" android:background="@drawable/toolbar_bg">
+        <ImageView android:src="@drawable/title_back" android:layout_gravity="center_vertical" android:scaleType="fitXY" android:layout_height="wrap_content" android:layout_width="wrap_content" android:clickable="true" android:id="@+id/btnGoBack"></ImageView>
+        <LinearLayout android:id="@+id/linearLayout2" android:layout_height="match_parent" android:layout_width="wrap_content" android:layout_weight="1.0" android:gravity="center" android:weightSum="1">
+            <TextView android:textSize="20dip" android:textColor="#000000" android:id="@+id/textView1" android:layout_width="wrap_content" android:text="微博正文" android:layout_height="wrap_content"></TextView>
+        </LinearLayout>
+        <ImageView android:src="@drawable/title_home" android:scaleType="center" android:layout_marginLeft="5dip" android:layout_gravity="center_vertical|right" android:layout_height="wrap_content" android:layout_width="wrap_content" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" android:id="@+id/btnGoHome"></ImageView>
+    </LinearLayout>
+     <RelativeLayout android:layout_width="match_parent" android:id="@+id/relativeLayout1" android:layout_height="wrap_content" android:background="@drawable/line_bottom">
+         <ImageView android:layout_height="40dp" android:src="@drawable/portrait" android:layout_width="40dp" android:scaleType="fitXY" android:id="@+id/img_UserIcon" android:layout_alignTop="@+id/img_UserTag" android:layout_alignParentLeft="true"></ImageView>       
+         <ImageView android:layout_height="wrap_content" android:src="@drawable/portrait_v_blue" android:layout_width="wrap_content" android:layout_centerVertical="true" android:layout_alignParentLeft="true" android:id="@+id/img_UserTag"></ImageView>
+         <TextView android:id="@+id/textView2" android:layout_height="wrap_content" android:text="youli2001" android:layout_width="wrap_content" android:layout_alignTop="@+id/img_UserTag" android:layout_toRightOf="@+id/img_UserIcon" android:layout_marginLeft="10dip" android:textColor="#000000" android:textStyle="bold"></TextView>
+         <ImageView android:layout_height="wrap_content" android:src="@drawable/icon_gouserinfo" android:layout_width="wrap_content" android:id="@+id/imageView1" android:layout_centerVertical="true" android:layout_alignParentRight="true"></ImageView>
+     </RelativeLayout>
+     <LinearLayout android:layout_width="match_parent" android:id="@+id/linearLayout6" android:orientation="vertical" android:layout_weight="1" android:layout_height="match_parent">
+             <TextView android:text="WeiboContent..." android:layout_height="wrap_content" android:id="@+id/txtWeiboContent" android:layout_width="wrap_content"></TextView>
+             <ImageView android:layout_gravity="center_horizontal" android:scaleType="center" android:layout_width="wrap_content" android:src="@drawable/ic_launcher" android:layout_height="wrap_content" android:id="@+id/imgLinkPic"></ImageView>
+             <LinearLayout android:layout_marginRight="5dip" android:layout_width="match_parent" android:layout_marginLeft="5dip" android:layout_marginBottom="5dip" android:id="@+id/linearLayout1" android:layout_height="wrap_content" android:weightSum="2" android:layout_marginTop="5dip">
+                 <RelativeLayout android:layout_width="wrap_content" android:background="@drawable/detail_redirect" android:layout_weight="1" android:layout_height="match_parent" android:clickable="true" android:id="@+id/btnForward2">
+                     <TextView android:layout_centerVertical="true" android:id="@+id/textView6" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:text="108" android:layout_width="wrap_content"></TextView>
+                 </RelativeLayout>
+                 <RelativeLayout android:layout_width="wrap_content" android:background="@drawable/detail_comment" android:layout_weight="1" android:layout_height="match_parent" android:clickable="true" android:id="@+id/btnReplyDisplay">
+                     <TextView android:layout_centerVertical="true" android:id="@+id/textView7" android:layout_height="wrap_content" android:layout_centerHorizontal="true" android:text="25" android:layout_width="wrap_content"></TextView>
+                 </RelativeLayout>
+             </LinearLayout>
+             <LinearLayout android:layout_width="match_parent" android:layout_marginBottom="5dip" android:id="@+id/linearLayout3" android:layout_height="wrap_content">
+                 <TextView android:layout_width="wrap_content" android:layout_marginLeft="5dip" android:text="2-15 21:00" android:layout_height="wrap_content" android:id="@+id/txtCreatedTime"></TextView>
+                 <TextView android:layout_width="wrap_content" android:layout_marginLeft="10dip" android:text="来自：HTC手机" android:layout_height="wrap_content" android:id="@+id/txtSrcDescription"></TextView>
+             </LinearLayout>
+         </LinearLayout>
+
+     <LinearLayout android:layout_width="match_parent" android:id="@+id/linearLayout5" android:layout_height="wrap_content" android:layout_marginBottom="4dip" android:layout_gravity="bottom">
+         <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent" android:orientation="vertical" android:layout_weight="1" android:gravity="center" android:background="@drawable/toolbar_bg_left" android:clickable="true" android:id="@+id/btnRefresh">
+             <ImageView android:layout_width="wrap_content" android:id="@+id/imageView3" android:layout_height="wrap_content" android:src="@drawable/toolbar_refresh_icon"></ImageView>
+             <TextView android:id="@+id/textView8" android:layout_height="wrap_content" android:textSize="12dip" android:text="刷新" android:layout_width="wrap_content" android:textColor="#ffffff"></TextView>
+         </LinearLayout>
+         <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent" android:orientation="vertical" android:layout_weight="1" android:gravity="center" android:background="@drawable/toolbar_bg_middle" android:clickable="true" android:id="@+id/btnReply">
+             <ImageView android:layout_width="wrap_content" android:id="@+id/imageView4" android:layout_height="wrap_content" android:src="@drawable/toolbar_comment_icon"></ImageView>
+             <TextView android:text="评论" android:id="@+id/textView9" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="12dip" android:textColor="#ffffff"></TextView>
+         </LinearLayout>
+         <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent" android:orientation="vertical" android:layout_weight="1" android:gravity="center" android:background="@drawable/toolbar_bg_middle" android:clickable="true" android:id="@+id/btnForward">
+             <ImageView android:layout_width="wrap_content" android:id="@+id/imageView5" android:layout_height="wrap_content" android:src="@drawable/toolbar_forward_icon"></ImageView>
+             <TextView android:text="转发" android:id="@+id/textView10" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="12dip" android:textColor="#ffffff"></TextView>
+         </LinearLayout>
+         <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent" android:orientation="vertical" android:layout_weight="1" android:gravity="center" android:background="@drawable/toolbar_bg_middle" android:clickable="true" android:id="@+id/btnFavorate">
+             <ImageView android:layout_width="wrap_content" android:id="@+id/imageView6" android:layout_height="wrap_content" android:src="@drawable/toolbar_fav_icon"></ImageView>
+             <TextView android:text="收藏" android:id="@+id/textView11" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="12dip" android:textColor="#ffffff"></TextView>
+         </LinearLayout>
+         <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent" android:orientation="vertical" android:layout_weight="1" android:gravity="center" android:background="@drawable/toolbar_bg_right" android:clickable="true" android:id="@+id/btnMore">
+             <ImageView android:layout_width="wrap_content" android:id="@+id/imageView7" android:layout_height="wrap_content" android:src="@drawable/toolbar_more_icon"></ImageView>
+             <TextView android:text="更多" android:id="@+id/textView12" android:layout_width="wrap_content" android:layout_height="wrap_content" android:textSize="12dip" android:textColor="#ffffff"></TextView>
+         </LinearLayout>
+     </LinearLayout>
 
 </LinearLayout>
