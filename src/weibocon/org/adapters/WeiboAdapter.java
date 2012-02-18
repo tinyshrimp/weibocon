@@ -56,7 +56,7 @@ public class WeiboAdapter extends BaseAdapter
 		{
 			listItemView = new ListItemView();
 			convertView = listContainer.inflate(R.layout.list_item, null);
-			//»ñµÃ¿Ø¼ş¶ÔÏó
+			//ï½»î„°ï¾ƒï½¿ï¾˜ï½¼ï¿½ï¾”ï¾ï¿½
 			/*
 			listItemView.image =(ImageView) convertView.findViewById(R.id.imageitem);
 			listItemView.title =(TextView) convertView.findViewById(R.id.textview);
@@ -64,21 +64,21 @@ public class WeiboAdapter extends BaseAdapter
 			listItemView.detail=(Button) convertView.findViewById(R.id.button);
 			listItemView.check = (CheckBox) convertView.findViewById(R.id.checkItem);
 			*/
-			//ÉèÖÃ¿Õ¼ä¼¯µ½convertView
+			//ï¾‰é¹ï¾ƒï½¿ï¾•ï½¼è¨ï½¯ï½µï½½convertView
 			convertView.setTag(listItemView);
 		}else
 		{
 			listItemView = (ListItemView) convertView.getTag();
 		}
 		
-		//ÉèÖÃÎÄ×ÖÍ¼Æ¬
+		//ï¾‰é¹ï¾ƒï¾ï¾„ï¾—ï¾–ï¾ï½¼ï¾†ï½¬
 		/*
 		listItemView.image.setBackgroundResource((Integer)listItems.get(position).get("image"));
 		listItemView.title.setText((String)listItems.get(position).get("title"));
 		listItemView.info.setText((String) listItems.get(position).get("info"));
-		listItemView.detail.setText("±¾²Ë½éÉÜ");
+		listItemView.detail.setText("ï½±ï½¾ï½²ï¾‹ï½½é¯”ï¾œ");
 		*/
-		
+			
 		return convertView;
 	}
 
