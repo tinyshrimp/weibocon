@@ -2,6 +2,7 @@
 <resources>
 
     <string name="hello">Hello World, WeiboconActivity!</string>
-    <string name="app_name">Weibocon</string>
+    <string name="app_name">围脖控</string>
+    <string name="sys_setting">设  置</string>
 
 </resources>
