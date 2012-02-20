@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  android:orientation="horizontal"
+  android:layout_width="match_parent"
+  android:layout_height="50dip"  
+  android:weightSum="5">
+        <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_height="match_parent" android:layout_weight="1" android:layout_width="match_parent" android:background="@drawable/home_btn_bg" android:clickable="true" android:focusable="true" android:focusableInTouchMode="true" android:id="@+id/tabpnl_home">
+            <ImageView android:src="@drawable/icon_home" android:scaleType="center" android:id="@+id/ImageView04" android:layout_width="wrap_content" android:layout_height="wrap_content"></ImageView>
+            <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/textView1" android:text="首页" android:textSize="12dip"  android:textColor="#ffffff"></TextView>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_height="match_parent" android:layout_weight="1" android:layout_width="match_parent" android:background="@drawable/home_btn_bg" android:clickable="true" android:focusable="true" android:focusableInTouchMode="true" android:id="@+id/tabpnl_message">
+            <ImageView android:src="@drawable/icon_meassage" android:scaleType="center" android:id="@+id/ImageView03" android:layout_width="wrap_content" android:layout_height="wrap_content"></ImageView>
+            <TextView android:textSize="12dip" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/textView2" android:text="信息" android:textColor="#ffffff"></TextView>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_height="match_parent" android:layout_weight="1" android:layout_width="match_parent" android:background="@drawable/home_btn_bg" android:clickable="true" android:focusable="true" android:focusableInTouchMode="true" android:id="@+id/tabpnl_selfinfo">
+            <ImageView android:src="@drawable/icon_selfinfo" android:scaleType="center" android:id="@+id/ImageView02" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+            <TextView android:textSize="12dip" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/textView3" android:text="我的资料"  android:textColor="#ffffff"></TextView>
+        </LinearLayout>
+        <LinearLayout android:orientation="vertical" android:gravity="center" android:layout_height="match_parent" android:layout_weight="1" android:layout_width="match_parent" android:background="@drawable/home_btn_bg" android:clickable="true" android:focusable="true" android:focusableInTouchMode="true" android:id="@+id/tabpnl_square">
+            <ImageView android:src="@drawable/icon_square" android:scaleType="center" android:id="@+id/ImageView01" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+            <TextView android:textSize="12dip" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/textView4" android:text="广场"  android:textColor="#ffffff"></TextView>
+        </LinearLayout>
+        <LinearLayout android:layout_height="match_parent" android:orientation="vertical" android:gravity="center" android:layout_weight="1" android:layout_width="match_parent" android:background="@drawable/home_btn_bg" android:clickable="true" android:focusable="true" android:focusableInTouchMode="true" android:id="@+id/tabpnl_more">
+            <ImageView android:src="@drawable/icon_more" android:id="@+id/imageView2" android:scaleType="center" android:layout_height="wrap_content" android:layout_width="wrap_content"></ImageView>
+            <TextView android:textSize="12dip" android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/textView5" android:text="更多"  android:textColor="#ffffff"></TextView>
+        </LinearLayout>
+</LinearLayout>

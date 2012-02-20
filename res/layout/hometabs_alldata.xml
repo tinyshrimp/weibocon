@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/pnl_WeiboAll"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:weightSum="1" >
+
+    <LinearLayout android:layout_width="match_parent" android:layout_weight="0.01" android:weightSum="1" android:id="@+id/pnl_Header" android:gravity="center_vertical" android:layout_height="40dip" android:background="@drawable/toolbar_bg">
+        <ImageView android:src="@drawable/title_new" android:id="@+id/img_EditButton" android:layout_gravity="center_vertical" android:scaleType="fitXY" android:layout_width="50dp" android:layout_height="44dp"></ImageView>
+        <ImageView android:src="@drawable/title_location" android:id="@+id/img_LocationButton" android:layout_gravity="center_vertical" android:layout_marginRight="10dip" android:clickable="true" android:scaleType="fitXY" android:layout_width="40dp" android:layout_height="40dp" android:layout_marginTop="2dp"></ImageView>
+        <LinearLayout android:id="@+id/linearLayout2" android:layout_weight="1.0" android:gravity="center_vertical|right" android:layout_width="wrap_content" android:layout_height="match_parent">
+            <LinearLayout android:layout_width="wrap_content" android:layout_height="wrap_content" android:id="@+id/btnUserSelection" android:layout_marginRight="25dip" android:clickable="true">
+                <TextView android:layout_width="wrap_content" android:layout_marginRight="3dip" android:textColor="#000000" android:textSize="15dip" android:layout_height="wrap_content" android:text="youli2001" android:textStyle="bold" android:id="@+id/txtUserName"></TextView>
+                <ImageView android:layout_width="15dp" android:src="@drawable/grouplist_title_arrow_down" android:scaleType="center" android:paddingTop="5dip" android:layout_height="20dp" android:id="@+id/imgDropDown"></ImageView>
+            </LinearLayout>
+        </LinearLayout>
+        <ImageView android:src="@drawable/title_reload" android:id="@+id/imageView1" android:scaleType="center" android:layout_marginLeft="5dip" android:layout_gravity="center_vertical|right" android:focusable="true" android:focusableInTouchMode="true" android:clickable="true" android:layout_width="50dp" android:layout_height="44dp"></ImageView>
+    </LinearLayout>
+    <RelativeLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:layout_weight="0.05" android:id="@+id/pnl_Loading" android:background="@drawable/line_bottom">
+        <TextView android:layout_height="wrap_content" android:text="数据加载中…" android:layout_width="wrap_content" android:layout_centerVertical="true" android:layout_centerHorizontal="true" android:id="@+id/txtLoadData" android:textColor="#a0a0a0" android:textSize="12dip"></TextView>
+        <ProgressBar android:layout_height="wrap_content" android:layout_width="wrap_content" android:id="@+id/pgLoadData" style="?android:attr/progressBarStyleSmall" android:layout_alignTop="@+id/txtLoadData" android:layout_alignParentLeft="true"></ProgressBar>
+    </RelativeLayout>
+    <ListView android:layout_height="wrap_content" android:layout_width="match_parent" android:layout_weight="1.0" 
+              android:id="@+id/lst_WeiboContent" android:fastScrollEnabled="true" android:smoothScrollbar="true" 
+              android:background="#ffffff" android:fadingEdge="none" android:cacheColorHint="#00000000" 
+              android:listSelector="@drawable/home_sel_bg" android:choiceMode="singleChoice" 
+              android:divider="#c5c4c4" android:dividerHeight="1dp">
+    </ListView>
+</LinearLayout>
