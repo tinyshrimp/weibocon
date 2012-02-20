@@ -2,7 +2,12 @@
 <resources>
 
     <string name="hello">Hello World, WeiboconActivity!</string>
-    <string name="app_name">围脖控</string>
-    <string name="sys_setting">设  置</string>
-
+    <string name="app_name">Weibocon</string>
+    <string name="quitconf_title">退出确认</string>
+    <string name="quitconf_message">你确认要退出吗？</string>
+    <string name="tabtitle_alldata">首页</string>
+    <string name="tabtitle_message">信息</string>
+    <string name="tabtitle_userinfo">我的资料</string>
+    <string name="tabtitle_place">广场</string>
+    <string name="tabtitle_aboutmore">更多</string>
 </resources>

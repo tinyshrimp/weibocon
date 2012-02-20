@@ -8,6 +8,6 @@ public class WeiboconActivity extends Activity {
     @Override
     public void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.sys_welcome);
+        setContentView(R.layout.main);
     }
 }

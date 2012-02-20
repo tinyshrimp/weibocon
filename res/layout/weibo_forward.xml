@@ -2,8 +2,102 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:gravity="left"
     android:orientation="vertical" >
+    <LinearLayout
+        android:id="@+id/pnl_Header"
+        android:layout_width="match_parent"
+        android:layout_height="40dip"
+        android:background="@drawable/toolbar_bg"
+        android:gravity="center_vertical" >
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:scaleType="fitXY"
+            android:src="@drawable/title_back" android:id="@+id/btnGoBack">
+        </ImageView>
+        <LinearLayout
+            android:id="@+id/linearLayout2"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:gravity="center"
+            android:weightSum="1" >
+            <TextView
+                android:id="@+id/textView1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="转发微博"
+                android:textColor="#000000"
+                android:textSize="20dip" >
+            </TextView>
+        </LinearLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|right"
+            android:text="发送"
+            android:textSize="10dip" android:background="@drawable/button_ground" android:layout_marginRight="4dip" android:id="@+id/btnSend"/>
+    </LinearLayout>
+    <EditText
+        android:id="@+id/txtInputContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="left|top"
+        android:inputType="textMultiLine"
+        android:singleLine="false" android:background="@drawable/editor_bg">
 
-    
-
+        <requestFocus />
+    </EditText>
+    <LinearLayout
+        android:id="@+id/linearLayout1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="right" android:layout_marginRight="5dip" android:background="@drawable/btn_comment" android:gravity="center" android:layout_marginBottom="5dip" android:clickable="true">
+        <TextView
+            android:id="@+id/txtRemainWords"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="140" />
+        <ImageView
+            android:id="@+id/imageView1"
+            android:src="@drawable/ic_delete" android:layout_height="wrap_content" android:layout_width="wrap_content"/>
+    </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:layout_height="wrap_content" android:orientation="vertical" android:id="@+id/pnlSelectionList" android:visibility="gone" android:background="@drawable/line_top">
+         <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="请插入话题名称" android:id="@+id/txtListDescription" android:textColor="#000000"></TextView>
+         <LinearLayout android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/linearLayout3" android:background="#506375">
+             <TextView android:layout_height="wrap_content" android:layout_width="wrap_content" android:text="推荐话题" android:id="@+id/txtListTitle" android:textColor="#ffffff" android:textSize="10dip"></TextView>
+         </LinearLayout>
+         <ListView android:layout_height="wrap_content" android:layout_width="match_parent" android:id="@+id/lstSelection" android:cacheColorHint="#00000000" 
+                   android:choiceMode="singleChoice" android:fadingEdge="none" android:footerDividersEnabled="true" 
+                   android:headerDividersEnabled="true" android:listSelector="@drawable/home_sel_bg"
+                   android:divider="#c5c4c4" android:dividerHeight="1dp"></ListView>
+    </LinearLayout>   
+    <LinearLayout
+        android:id="@+id/linearLayout5"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="4dip"
+        android:background="@drawable/toolbar_bg"
+        android:paddingBottom="2dip"
+        android:paddingTop="2dip" >
+         <LinearLayout android:layout_width="wrap_content" android:id="@+id/linearLayout7" android:layout_height="match_parent" android:orientation="horizontal" android:paddingLeft="10dip" android:gravity="center_vertical|left">
+             <CheckBox android:text="同时作为评论发布" android:layout_width="wrap_content" android:layout_height="wrap_content" android:button="@drawable/btn_checkbox" android:textSize="12dip" android:textColor="#000000" android:paddingLeft="23dp" android:id="@+id/chkAsReply"></CheckBox>
+          </LinearLayout>
+         <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent" android:orientation="vertical" android:layout_weight="1" android:gravity="center" android:clickable="true" android:id="@+id/btnTopicSel">
+             <ImageView android:layout_width="wrap_content" android:id="@+id/imageView5" android:layout_height="wrap_content" android:src="@drawable/btn_insert_topic"></ImageView>
+         </LinearLayout>
+         <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent" android:orientation="vertical" android:layout_weight="1" android:gravity="center" android:clickable="true" android:id="@+id/btnAtSel">
+             <ImageView android:layout_width="wrap_content" android:id="@+id/imageView6" android:layout_height="wrap_content" android:src="@drawable/btn_insert_at"></ImageView>
+         </LinearLayout>
+         <LinearLayout android:layout_width="wrap_content" android:layout_height="match_parent" android:orientation="vertical" android:layout_weight="1" android:gravity="center" android:clickable="true" android:id="@+id/btnFaceSel">
+             <ImageView android:layout_width="wrap_content" android:id="@+id/imageView7" android:layout_height="wrap_content" android:src="@drawable/btn_insert_face"></ImageView>
+         </LinearLayout>
+     </LinearLayout>
+    <LinearLayout android:layout_width="match_parent" android:orientation="vertical" android:id="@+id/pnlFaceList" android:layout_height="150dip" android:visibility="gone">
+        <GridView android:layout_width="match_parent" android:numColumns="3" android:id="@+id/gridFaceList" android:layout_height="match_parent" android:cacheColorHint="#00000000"></GridView>
+    </LinearLayout>
 </LinearLayout>

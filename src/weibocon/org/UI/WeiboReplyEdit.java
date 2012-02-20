@@ -1,7 +1,13 @@
 package weibocon.org.UI;
 
-import android.app.Activity;
+import weibocon.org.R;
 
-public class WeiboReplyEdit extends Activity {
-
+public class WeiboReplyEdit extends WeiboEditBase {
+	
+	@Override
+	protected void SetLayoutResource()
+	{
+		this.setContentView(R.layout.weibo_reply_edit);
+	}
+	
 }
